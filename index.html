@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eonix</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+        :root {
+            --background-color: #f9f9f9;
+            --text-color: #333;
+            --header-background: #ffffff;
+            --footer-background: #333;
+            --footer-text-color: #fff;
+        }
+
+        [data-theme="dark"] {
+            --background-color: #1e1e1e;
+            --text-color: #f9f9f9;
+            --header-background: #2b2b2b;
+            --footer-background: #1e1e1e;
+            --footer-text-color: #bbb;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px;
+            background-color: var(--header-background);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+            position: relative;
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            line-height: 1.4;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #ff007c, #6c63ff, #ff6347);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #7d7d7d;
+        }
+
+        header p span {
+            color: #6c63ff;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            font-size: 1rem;
+            color: #fff;
+            background: linear-gradient(90deg, #6c63ff, #8a76ff);
+            text-decoration: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(108, 99, 255, 0.5);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(108, 99, 255, 0.7);
+        }
+
+        .install-banner {
+            display: block;
+            margin: 15px auto 0;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            color: #fff;
+            background: #ff6347;
+            border-radius: 5px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 250px;
+        }
+
+        main {
+            padding: 50px;
+            background-color: var(--background-color);
+            flex: 1;
+            transition: background-color 0.3s;
+        }
+
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 100px;
+            margin-top: 30px;
+        }
+
+        .features article {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .features article:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--footer-background);
+            color: var(--footer-text-color);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        footer a {
+            color: #6c63ff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="theme-toggle" onclick="toggleTheme()"></div>
+        <h1>Eonix - a sleek,<br>blazing-fast framework<br>for building AI agents</h1>
+        <p>Empowering everyone with <span>lightweight AI agents</span> solutions</p>
+        <a href="https://github.com/EonixLLM/eonixllm" class="btn">Get Started</a>
+        <div class="install-banner">npm install @eonixLLM/eonix</div>
+    </header>
+
+    <main>
+        <section class="features">
+            <article>
+                <h2>🤖 The First LLM Processor</h2>
+                <p>Eonix is an experimental framework crafted to empower Large Language Models (LLMs) to operate as proactive, autonomous AI agents. Beyond merely responding to questions, these agents actively assess their environment, determine optimal actions, and execute them—driven by defined goals and tailored functions.</p>
+            </article>
+
+            <article>
+                <h2>🔍 Proactive Decision-Making</h2>
+                <p>Continuous environment evaluation goal-driven autonomous actions step-by-step execution with clear reasoning Long-Term Memory and Learning Accumulates knowledge and insights during execution periodically summarizes and consolidates learnings uses accumulated knowledge to inform future decisions extracts best practices useful findings and helpful knowledge maintains a growing knowledge base that evolves with experience</p>
+            </article>
+
+            <article>
+                <h2>💾 Long-Term Memory and Learning</h2>
+                <p>Accumulates knowledge and insights during execution periodically summarizes and consolidates learnings uses accumulated knowledge to inform future decisions extracts best practices useful findings and helpful knowledge maintains a growing knowledge base that evolves with experience</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright © 2024 EonixLLM | <a href="https://github.com/EonixLLM/eonixllm">GitHub</a> | <a href="https://x.com/EonixLLM">X.com</a></p>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            if (body.hasAttribute('data-theme')) {
+                body.removeAttribute('data-theme');
+            } else {
+                body.setAttribute('data-theme', 'dark');
+            }
+        }
+    </script>
+</body>
+</html>
