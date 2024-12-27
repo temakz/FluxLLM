@@ -1,6 +1,6 @@
-# vioraLLM/Viora - The First LLM Processor For Proactive Autonomous AI Agents
+# FluxLLM - The Latest LLM Processor For Proactive Autonomous AI Agents
 
-**vioraLLM/Viora** is an experimental framework designed to enable Large Language Models (LLMs) to function as proactive, autonomous AI agents. Rather than simply answering questions, these agents continuously evaluate their environment, decide on the next best action, and perform it—all guided by predefined functions and goals.
+**FluxLLM/Flux** is an experimental framework designed to enable Large Language Models (LLMs) to function as proactive, autonomous AI agents. Rather than simply answering questions, these agents continuously evaluate their environment, decide on the next best action, and perform it—all guided by predefined functions and goals.
 
 ## Key Features
 
